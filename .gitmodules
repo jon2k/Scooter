@@ -1,0 +1,6 @@
+[submodule "ScooterApi"]
+	path = ScooterApi
+	url = https://github.com/jon2k/ScooterApi
+[submodule "ScooterSpeedApi"]
+	path = ScooterSpeedApi
+	url = https://github.com/jon2k/ScooterSpeedApi
