@@ -9,6 +9,19 @@ services:
             - RABBITMQ_DEFAULT_USER=user
             - RABBITMQ_DEFAULT_PASS=password        
         image: rabbitmq:3-management
+
+    postgres:
+        container_name: postgres
+        ports:
+        - ${POSTGRES_PORT:-5432}:5432 
+        environment:
+        - POSTGRES_PASSWORD=1
+        - POSTGRES_USER=postgres
+        # - POSTGRES_DB=selectel
+        volumes:
+        - pg_project:/var/lib/postgresql/data
+        image: postgres
+        restart: always
                 
     scooterapi:
         container_name: scooterapi
